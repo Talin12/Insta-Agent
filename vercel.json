@@ -5,10 +5,5 @@
   ],
   "routes": [
     { "src": "/(.*)", "dest": "backend/main.py" }
-  ],
-  "functions": {
-    "backend/main.py": {
-      "excludeFiles": "frontend/**"
-    }
-  }
+  ]
 }
