@@ -3,6 +3,8 @@ import requests
 from streamlit_lottie import st_lottie  # Make sure this is installed: pip install streamlit-lottie
 from components.input_form import input_form
 
+API_URL = "https://caption-agent-pvga9mz5b-talin-dagas-projects.vercel.app/generate"
+
 # Function to load Lottie animation from URL
 def load_lottieurl(url: str):
     r = requests.get(url)
@@ -34,7 +36,7 @@ def main():
                 with st.spinner("Generating..."):
                     try:
                         response = requests.post(
-                            "http://localhost:8081/generate",
+                            API_URL,
                             json={
                                 "product_name": product_name,
                                 "features": features,
