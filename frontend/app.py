@@ -10,7 +10,7 @@ style_example = st.text_area("Style Example (paste a caption you like)")
 if st.button("Generate Post"):
     with st.spinner("Generating..."):
         response = requests.post(
-            "http://localhost:8080/generate",
+            "http://localhost:8081/generate",
             json={
                 "product_name": product_name,
                 "features": features,
